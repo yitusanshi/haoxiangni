@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletRequest;
  * Created by Cesiumai on 2016/6/14.
  */
 @Controller("frontPolicyController")
-@RequestMapping("/")
+@RequestMapping("/policy")
 public class PolicyAction extends BaseController<Article>{
     private static final String page_toList = "/front/policy/policyList";
     private static final String page_toEdit = "/front/policy/policyInfo";
