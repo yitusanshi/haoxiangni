@@ -1,12 +1,12 @@
 package com.enterprise.controller.front;
 
-import com.enterprise.service.Services;
+import com.enterprise.controller.BaseController;
 import com.enterprise.core.SystemManage;
 import com.enterprise.entity.Article;
 import com.enterprise.entity.ArticleCategory;
 import com.enterprise.entity.page.PageModel;
 import com.enterprise.service.ArticleService;
-import com.enterprise.controller.BaseController;
+import com.enterprise.service.Services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -20,11 +20,11 @@ import javax.servlet.http.HttpServletRequest;
  * 文章Action
  * Created by Cesiumai on 2016/6/14.
  */
-@Controller("frontArticleController")
+@Controller("frontLawsController")
 @RequestMapping("/")
-public class ArticleAction extends BaseController<Article>{
-    private static final String page_toList = "/front/policy/policyList";
-    private static final String page_toEdit = "/front/policy/policyInfo";
+public class LawsAction extends BaseController<Article>{
+    private static final String page_toList = "/front/laws/lawsList";
+    private static final String page_toEdit = "/front/laws/lawsInfo";
 
     @Autowired
     private ArticleService articleService;
@@ -32,7 +32,7 @@ public class ArticleAction extends BaseController<Article>{
     public Services<Article> getService() {
         return articleService;
     }
-    public ArticleAction(){
+    public LawsAction(){
         super.page_toList = page_toList;
         super.page_toEdit = page_toEdit;
     }

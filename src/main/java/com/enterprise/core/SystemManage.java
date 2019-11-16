@@ -114,6 +114,27 @@ public class SystemManage {
     public void setArticleCategory(List<ArticleCategory> articleCategory){
         putCacheObject("articleCategory",(Serializable)(articleCategory));
     }
+
+    public List<ArticleCategory> getPolicyCategory(){
+        return getCacheObject("policyCategory");
+    }
+    public void setPolicyCategory(List<ArticleCategory> articleCategory){
+        putCacheObject("policyCategory",(Serializable)(articleCategory));
+    }
+
+    public List<ArticleCategory> getLawsCategory(){
+        return getCacheObject("lawsCategory");
+    }
+    public void setLawsCategory(List<ArticleCategory> articleCategory){
+        putCacheObject("lawsCategory",(Serializable)(articleCategory));
+    }
+    public List<ArticleCategory> getCaseCategory(){
+        return getCacheObject("caseCategory");
+    }
+    public void setCaseCategory(List<ArticleCategory> articleCategory){
+        putCacheObject("caseCategory",(Serializable)(articleCategory));
+    }
+
     //联系我们
     public List<Contact> getContact(){
         return getCacheObject("contacts");
