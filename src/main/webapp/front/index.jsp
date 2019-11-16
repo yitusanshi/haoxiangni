@@ -54,7 +54,7 @@
 <div class="banners" >
     <ul>
         <li class="banners_li">
-            <a href="<%=path%>/service">
+            <a href="<%=path%>/policy">
                 <div>
                     <h3>政策信息</h3>
                     <p>政策信息，一键了解</p>
@@ -62,7 +62,7 @@
             </a>
         </li>
         <li class="banners_li">
-            <a href="<%=path%>/article">
+            <a href="<%=path%>/laws">
                 <div>
                     <h3>标准法规</h3>
                     <p>标准法规，及时掌握</p>
@@ -73,7 +73,7 @@
             <a href="<%=path%>/about">
                 <div>
                     <h3>关于我们</h3>
-                    <p>了解我们，了解华宇</p>
+                    <p>了解好想你，了解我们</p>
                 </div>
             </a>
         </li>
