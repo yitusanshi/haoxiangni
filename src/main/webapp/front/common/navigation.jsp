@@ -49,16 +49,16 @@
                 <a href="<%=path%>/index">首 页</a>
             </li>
             <li>
-                <a href="<%=path%>/policy">政策信息</a>
+                <a href="<%=path%>/index">政策信息</a>
             </li>
             <li>
-                <a href="<%=path%>/laws">标准法规</a>
+                <a href="<%=path%>/article">标准法规(好使)</a>
             </li>
             <li>
-                <a href="<%=path%>/case">优秀案例</a>
+                <a href="<%=path%>/case/article">优秀案例</a>
             </li>
             <li>
-                <a href="<%=path%>/design">绿色设计</a>
+                <a href="<%=path%>/message">绿色设计</a>
             </li>
             <li>
                 <a href="<%=path%>/message">分享交流</a>

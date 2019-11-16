@@ -23,8 +23,8 @@ import javax.servlet.http.HttpServletRequest;
 @Controller("frontArticleController")
 @RequestMapping("/")
 public class ArticleAction extends BaseController<Article>{
-    private static final String page_toList = "/front/policy/policyList";
-    private static final String page_toEdit = "/front/policy/policyInfo";
+    private static final String page_toList = "/front/article/policyList";
+    private static final String page_toEdit = "/front/article/policyInfo";
 
     @Autowired
     private ArticleService articleService;

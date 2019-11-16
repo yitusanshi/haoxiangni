@@ -20,8 +20,8 @@
         <div class="warp_left_box">
             <h3>优秀案例</h3>
             <ul>
-<c:forEach var="item" items="<%=SystemManage.getInstance().getArticleCategory()%>">
-    <li <c:if test="${e.catename eq item.catename}">class="active"</c:if>><a href="<%=path%>/case/${item.code}">${item.catename}</a></li>
+<c:forEach var="item" items="<%=SystemManage.getInstance().getCaseCategory()%>">
+    <li <c:if test="${e.catename eq item.catename}">class="active"</c:if>><a href="<%=path%>/case/article/${item.code}">${item.catename}</a></li>
     </c:forEach>
             </ul>
         </div>
@@ -30,9 +30,9 @@
         <div class="breadcrumb">
             <a href="<%=path%>/index">首页</a>
             >
-            <a href="<%=path%>/case">优秀案例</a>
+            <a href="<%=path%>/case/article">优秀案例</a>
             >
-            <a href="<%=path%>/case?categoryId=${e.categoryId}">${e.catename}</a>
+            <a href="<%=path%>/case/article?categoryId=${e.categoryId}">${e.catename}</a>
         </div>
         <div style="overflow: hidden;">
             <div class="article_content">
@@ -49,8 +49,8 @@
                 <script>
                     with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
                 </script>
-                <div class="previous">上一篇：<c:choose><c:when test="${previous.id != 0}"><a href="<%=path%>/case/${previous.id}">${previous.title}</a></c:when><c:otherwise>没有了</c:otherwise></c:choose></div>
-                <div class="next">下一篇：<c:choose><c:when test="${next.id != 0}"><a href="<%=path%>/case/${next.id}">${next.title}</a></c:when><c:otherwise>没有了</c:otherwise></c:choose></div>
+                <div class="previous">上一篇：<c:choose><c:when test="${previous.id != 0}"><a href="<%=path%>/case/article/${previous.id}">${previous.title}</a></c:when><c:otherwise>没有了</c:otherwise></c:choose></div>
+                <div class="next">下一篇：<c:choose><c:when test="${next.id != 0}"><a href="<%=path%>/case/article/${next.id}">${next.title}</a></c:when><c:otherwise>没有了</c:otherwise></c:choose></div>
             </div>
         </div>
     </div>
