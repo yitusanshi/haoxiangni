@@ -49,19 +49,19 @@
                 <a href="<%=path%>/index">首 页</a>
             </li>
             <li>
-                <a href="<%=path%>/about">关于我们</a>
+                <a href="<%=path%>/about">政策信息</a>
             </li>
             <li>
-                <a href="<%=path%>/service">服务领域</a>
+                <a href="<%=path%>/service">标准法规</a>
             </li>
             <li>
-                <a href="<%=path%>/article">新闻动态</a>
+                <a href="<%=path%>/article">优秀案例</a>
             </li>
             <li>
-                <a href="<%=path%>/recruitment">诚聘英才</a>
+                <a href="#">绿色设计</a>
             </li>
             <li>
-                <a href="<%=path%>/message">在线留言</a>
+                <a href="<%=path%>/message">分享交流</a>
             </li>
             <li>
                 <a href="<%=path%>/contact">联系我们</a>

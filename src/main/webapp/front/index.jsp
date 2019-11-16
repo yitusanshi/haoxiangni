@@ -56,16 +56,16 @@
         <li class="banners_li">
             <a href="<%=path%>/service">
                 <div>
-                    <h3>服务领域</h3>
-                    <p>别墅装修，校区装修</p>
+                    <h3>政策信息</h3>
+                    <p>政策信息，一键了解</p>
                 </div>
             </a>
         </li>
         <li class="banners_li">
             <a href="<%=path%>/article">
                 <div>
-                    <h3>新闻动态</h3>
-                    <p>公司动态，行业新闻</p>
+                    <h3>标准法规</h3>
+                    <p>标准法规，及时掌握</p>
                 </div>
             </a>
         </li>
