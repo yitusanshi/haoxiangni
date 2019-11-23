@@ -16,7 +16,7 @@
             <h3>优秀案例</h3>
             <ul>
                 <c:forEach var="item" items="<%=SystemManage.getInstance().getCaseCategory()%>">
-                    <li <c:if test="${!empty code && code eq item.code}">class="active"</c:if> ><a href="<%=path%>/case/article/${item.code}">${item.catename}</a></li>
+                    <li <c:if test="${!empty secondCode && secondCode eq item.secondCode}">class="active"</c:if> ><a href="<%=path%>/case/article/${item.secondCode}">${item.catename}</a></li>
                 </c:forEach>
             </ul>
         </div>
@@ -27,12 +27,12 @@
             >
             <a href="<%=path%>/case/article">优秀案例</a>
           <%
-                String code = (String)request.getAttribute("code");
-                if (code != null && code.length() != 0 ) {
+                String secondCode = (String)request.getAttribute("secondCode");
+                if (secondCode != null && secondCode.length() != 0 ) {
                     for (ArticleCategory ac : SystemManage.getInstance().getCaseCategory()) {
-                        if ((ac.getCode()).equals(code)) {
+                        if ((ac.getSecondCode()).equals(secondCode)) {
             %>
-            ><a href="<%=path%>/case/article/<%=ac.getCode()%>"><%=ac.getCatename()%>
+            ><a href="<%=path%>/case/article/<%=ac.getSecondCode()%>"><%=ac.getCatename()%>
         </a>
             <%
                             break;

@@ -15,7 +15,7 @@
             <ul>
                 <c:forEach var="item" items="<%=SystemManage.getInstance().getCaseCategory()%>">
                     <li <c:if test="${e.catename eq item.catename}">class="active"</c:if>><a
-                            href="<%=path%>/case/article/${item.code}">${item.catename}</a></li>
+                            href="<%=path%>/case/article/${item.secondCode}">${item.catename}</a></li>
                 </c:forEach>
             </ul>
         </div>
