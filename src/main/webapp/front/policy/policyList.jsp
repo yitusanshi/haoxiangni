@@ -25,7 +25,7 @@
                 <c:forEach var="item" items="<%=SystemManage.getInstance().getArticleCategory()%>">
                     <li
                             <c:if test="${!empty code && code eq item.code}">class="active"</c:if> ><a
-                            href="<%=path%>/policy/${item.code}">${item.catename}</a></li>
+                            href="<%=path%>/policy/article/${item.code}">${item.catename}</a></li>
                 </c:forEach>
             </ul>
         </div>
@@ -34,14 +34,14 @@
         <div class="breadcrumb">
             <a href="<%=path%>/index">首页</a>
             >
-            <a href="<%=path%>/policy">政策信息</a>
+            <a href="<%=path%>/policy/article">政策信息</a>
             <%
                 String code = (String) request.getAttribute("code");
                 if (code != null && code.length() != 0) {
                     for (ArticleCategory ac : SystemManage.getInstance().getArticleCategory()) {
                         if ((ac.getCode()).equals(code)) {
             %>
-            ><a href="<%=path%>/policy/<%=ac.getCode()%>"><%=ac.getCatename()%>
+            ><a href="<%=path%>/policy/article<%=ac.getCode()%>"><%=ac.getCatename()%>
         </a>
             <%
                             break;
@@ -53,11 +53,11 @@
         <div style="overflow: hidden;">
             <c:forEach var="item" items="${pager.list}">
                 <div class="article_item">
-                    <h2><a href="<%=path%>/policy/${item.id}">${item.title}</a></h2>
+                    <h2><a href="<%=path%>/policy/article/${item.id}">${item.title}</a></h2>
                     <p class="article_item_message">
                             ${item.createtime} | 分类：${item.catename} | 浏览量：${item.hit}
                     </p>
-                    <a href="policy/${item.id}"><span>${item.description}…</span></a>
+                    <a href="policy/article/${item.id}"><span>${item.description}…</span></a>
                 </div>
             </c:forEach>
         </div>
