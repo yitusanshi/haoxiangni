@@ -22,17 +22,19 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Controller("frontCaseController")
 @RequestMapping("/case")
-public class CaseAction extends BaseController<Article>{
+public class CaseAction extends BaseController<Article> {
     private static final String page_toList = "/front/case/caseList";
     private static final String page_toEdit = "/front/case/caseInfo";
 
     @Autowired
     private ArticleService articleService;
+
     @Override
     public Services<Article> getService() {
         return articleService;
     }
-    public CaseAction(){
+
+    public CaseAction() {
         super.page_toList = page_toList;
         super.page_toEdit = page_toEdit;
     }
@@ -50,17 +52,17 @@ public class CaseAction extends BaseController<Article>{
         this.initPageSelect();
         setParamWhenInitQuery(article);
         int offset = 0;
-        if(request.getParameter("pager.offset")!=null){
+        if (request.getParameter("pager.offset") != null) {
             offset = Integer.parseInt(request.getParameter("pager.offset"));
         }
-        if(offset < 0){
-            offset=0;
+        if (offset < 0) {
+            offset = 0;
         }
         article.setOffset(offset);
         article.setCode("c");
 
         PageModel page = getService().selectPageList(article);
-        if(page == null){
+        if (page == null) {
             page = new PageModel();
         }
         page.setPageSize(10);    //设置单页数据为10
@@ -81,8 +83,8 @@ public class CaseAction extends BaseController<Article>{
      * @throws Exception
      */
     @RequestMapping("article/{code}")
-    public String selectOne(HttpServletRequest request,@ModelAttribute("code")@PathVariable("code") String code,@ModelAttribute("e") Article article, ModelMap model) throws Exception {
-        if(isInteger(code)) {   //如果是数字   则为id   按id进行文章查询
+    public String selectOne(HttpServletRequest request, @ModelAttribute("code") @PathVariable("code") String code, @ModelAttribute("e") Article article, ModelMap model) throws Exception {
+        if (isInteger(code)) {   //如果是数字   则为id   按id进行文章查询
             Article e = articleService.selectById(Integer.parseInt(code));
             e.setHit(String.valueOf(Integer.parseInt(e.getHit())+1));
             articleService.update(e);       //更新浏览量     --优化建议：可使用缓存或者redis暂存  然后再刷入数据库

@@ -237,7 +237,7 @@
 
     </dependencies>
     <build>
-        <finalName>enterprise</finalName>
+        <finalName>haoxiangni</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -262,9 +262,9 @@
                 <version>2.1</version>
                 <configuration>
                     <port>8080</port>
-                    <path>/enterprise</path>
+                    <path>/haoxiangni</path>
                     <uriEncoding>UTF-8</uriEncoding>
-                    <finalName>enterprise</finalName>
+                    <finalName>haoxiangni</finalName>
                     <server>tomcat7</server>
                 </configuration>
             </plugin>

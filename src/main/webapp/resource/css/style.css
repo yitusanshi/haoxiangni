@@ -171,14 +171,14 @@ a{
     text-decoration: none;
 }
 .foot_bottom{
-    background: #2e2e2e;
-    height: 45px;
+    background: #B70005;
+    height: 150px;
 }
 .foot_bottom p {
     margin: 0 auto;
     width: 1000px;
     color: #777777;
-    line-height: 45px;
+    /*line-height: 150px;*/
     padding-left: 20px;
 }
 .message_input{
