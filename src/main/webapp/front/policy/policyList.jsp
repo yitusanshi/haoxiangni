@@ -14,7 +14,7 @@
         <div class="warp_left_box">
             <h3>政策信息</h3>
             <ul>
-                <c:forEach var="item" items="<%=SystemManage.getInstance().getArticleCategory()%>">
+                <c:forEach var="item" items="<%=SystemManage.getInstance().getPolicyCategory()%>">
                     <li
                             <c:if test="${!empty secondCode && secondCode eq item.secondCode}">class="active"</c:if> ><a
                             href="<%=path%>/policy/article/${item.secondCode}">${item.catename}</a></li>
@@ -30,7 +30,7 @@
             <%
                 String secondCode = (String) request.getAttribute("secondCode");
                 if (secondCode != null && secondCode.length() != 0) {
-                    for (ArticleCategory ac : SystemManage.getInstance().getArticleCategory()) {
+                    for (ArticleCategory ac : SystemManage.getInstance().getPolicyCategory()) {
                         if ((ac.getSecondCode()).equals(secondCode)) {
             %>
             ><a href="<%=path%>/policy/article<%=ac.getSecondCode()%>"><%=ac.getCatename()%>

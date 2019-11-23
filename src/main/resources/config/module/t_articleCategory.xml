@@ -25,7 +25,7 @@
             ,description
         </if>
         <if test="secondCode!=null and secondCode!=''">
-            ,second_code
+            ,secondCode
         </if>
         ) values (
             #{id}

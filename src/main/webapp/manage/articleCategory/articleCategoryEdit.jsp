@@ -31,7 +31,8 @@
             </tr>
             <tr>
                 <th style="text-align: right;" width="200">编码</th>
-                <td style="text-align: left;"><input type="text" size="40" value="${e.code}" name="code" id="code" data-rule="编码:required;letters;length[1~45];remote[unique, id]"/></td>
+                <%--<td style="text-align: left;"><input type="text" size="40" value="${e.code}" name="code" id="code" data-rule="编码:required;letters;length[1~45];remote[unique, id]"/></td>--%>
+                <td style="text-align: left;"><input type="text" size="40" value="${e.code}" name="code" id="code"/></td>
             </tr>
             <tr>
                 <th style="text-align: right;">排序</th>

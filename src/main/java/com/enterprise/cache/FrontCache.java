@@ -138,9 +138,13 @@ public class FrontCache implements ServletContextAware {
     public void loadArticleCategroy() throws Exception {
         List<ArticleCategory> articleCategoryLIst = new ArrayList<ArticleCategory>();
         articleCategoryLIst = articleCategoryService.selectList(new ArticleCategory());
+
+
         List<ArticleCategory> policyCategoryLIst = new ArrayList<ArticleCategory>();
         List<ArticleCategory> lawsCategoryLIst = new ArrayList<ArticleCategory>();
         List<ArticleCategory> caseCategoryLIst = new ArrayList<ArticleCategory>();
+
+
         for (ArticleCategory articleCategory : articleCategoryLIst) {
             if ("a".equals(articleCategory.getCode())) {
                 policyCategoryLIst.add(articleCategory);
@@ -152,6 +156,10 @@ public class FrontCache implements ServletContextAware {
                 caseCategoryLIst.add(articleCategory);
             }
         }
+
+/*        policyCategoryLIst = articleCategoryService.selectList(new ArticleCategory("a"));
+        lawsCategoryLIst = articleCategoryService.selectList(new ArticleCategory("b"));
+        caseCategoryLIst = articleCategoryService.selectList(new ArticleCategory("c"));*/
         systemManage.setPolicyCategory(policyCategoryLIst);
         systemManage.setLawsCategory(lawsCategoryLIst);
         systemManage.setCaseCategory(caseCategoryLIst);
