@@ -116,6 +116,7 @@ public class CaseAction extends BaseController<Article> {
                 offset=0;
             }
             article.setOffset(offset);
+            article.setCode(null);
             PageModel page = getService().selectPageList(article);
             if(page == null){
                 page = new PageModel();

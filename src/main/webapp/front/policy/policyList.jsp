@@ -1,12 +1,4 @@
 <%@ page import="com.enterprise.entity.ArticleCategory" %>
-
-<%--
-  Created by IntelliJ IDEA.
-  User: Cesiumai
-  Date: 2016/6/15
-  Time: 9:41
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; UTF-8"
          pageEncoding="UTF-8" %>
 
@@ -24,8 +16,8 @@
             <ul>
                 <c:forEach var="item" items="<%=SystemManage.getInstance().getArticleCategory()%>">
                     <li
-                            <c:if test="${!empty code && code eq item.code}">class="active"</c:if> ><a
-                            href="<%=path%>/policy/article/${item.code}">${item.catename}</a></li>
+                            <c:if test="${!empty secondCode && secondCode eq item.secondCode}">class="active"</c:if> ><a
+                            href="<%=path%>/policy/article/${item.secondCode}">${item.catename}</a></li>
                 </c:forEach>
             </ul>
         </div>
@@ -36,12 +28,12 @@
             >
             <a href="<%=path%>/policy/article">政策信息</a>
             <%
-                String code = (String) request.getAttribute("code");
-                if (code != null && code.length() != 0) {
+                String secondCode = (String) request.getAttribute("secondCode");
+                if (secondCode != null && secondCode.length() != 0) {
                     for (ArticleCategory ac : SystemManage.getInstance().getArticleCategory()) {
-                        if ((ac.getCode()).equals(code)) {
+                        if ((ac.getSecondCode()).equals(secondCode)) {
             %>
-            ><a href="<%=path%>/policy/article<%=ac.getCode()%>"><%=ac.getCatename()%>
+            ><a href="<%=path%>/policy/article<%=ac.getSecondCode()%>"><%=ac.getCatename()%>
         </a>
             <%
                             break;
