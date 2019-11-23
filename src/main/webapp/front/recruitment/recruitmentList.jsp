@@ -37,19 +37,9 @@
 %>
 <body>
 <%@include file="/front/common/navigation.jsp" %>
-<div class="banner" style="background-image: url(<%=path%>/resource/images/banner.jpg)">
+<div class="banner" style="background-image: url(<%=path%>/resource/images/1banner.jpg)">
 
-</div>
-<div class="warp_main">
-    <div class="warp_left">
-        <div class="warp_left_box">
-            <h3>诚聘英才</h3>
-
-        </div>
-    </div>
-    <div class="warp_right">
-        <div class="breadcrumb">
-            <a href="<%=path%>/index">首页</a>
+    <%=path%>/index">首页</a>
             >
             <a href="<%=path%>/recruitment">诚聘英才</a>
         </div>
