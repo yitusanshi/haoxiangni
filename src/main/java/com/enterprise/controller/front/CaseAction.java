@@ -102,11 +102,13 @@ public class CaseAction extends BaseController<Article> {
             return page_toEdit;
         }else{//不是数字，则为分类编码
             for(ArticleCategory item: SystemManage.getInstance().getCaseCategory()){ //遍历分类缓存
+                System.out.println(code + "  "  + item.getSecondCode());
                 if(code.equals(item.getSecondCode())){        //当编码相等时
                     article.setCategoryId(String.valueOf(item.getId()));    //把相等编码里的分类id值赋予文章中catagroyId中
                     break;  //跳出循环
                 }
             }
+            System.out.println(article.getCategoryId());
             setParamWhenInitQuery(article);
             int offset = 0;
             if(request.getParameter("pager.offset")!=null){
