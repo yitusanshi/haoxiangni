@@ -24,7 +24,9 @@
         <if test="description!=null and description!=''">
             ,description
         </if>
-
+        <if test="secondCode!=null and secondCode!=''">
+            ,second_code
+        </if>
         ) values (
             #{id}
         <if test="catename!=null and catename!=''">
@@ -37,7 +39,9 @@
         <if test="description!=null and description!=''">
             ,#{description}
         </if>
-
+        <if test="secondCode!=null and secondCode!=''">
+            ,#{secondCode}
+        </if>
         )
     </insert>
     <update id="articlecategory.update" parameterType="com.enterprise.entity.ArticleCategory">

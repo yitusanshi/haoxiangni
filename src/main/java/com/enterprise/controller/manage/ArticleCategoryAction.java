@@ -43,6 +43,10 @@ public class ArticleCategoryAction extends BaseController<ArticleCategory>{
 
     @Override
     public String insert(HttpServletRequest request, @ModelAttribute("e") ArticleCategory articleCategory, RedirectAttributes flushAttrs) throws Exception {
+        String code = articleCategory.getCode();
+        int order = articleCategory.getOrders();
+        String secondCode = code + order;
+        articleCategory.setSecondCode(secondCode);
         articleCategoryService.insert(articleCategory);
         insertAfter(articleCategory);
         addMessage(flushAttrs,"操作成功！");

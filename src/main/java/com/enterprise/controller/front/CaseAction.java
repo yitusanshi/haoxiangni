@@ -57,6 +57,7 @@ public class CaseAction extends BaseController<Article>{
             offset=0;
         }
         article.setOffset(offset);
+        article.setCode("c");
 
         PageModel page = getService().selectPageList(article);
         if(page == null){
@@ -99,7 +100,7 @@ public class CaseAction extends BaseController<Article>{
             return page_toEdit;
         }else{//不是数字，则为分类编码
             for(ArticleCategory item: SystemManage.getInstance().getCaseCategory()){ //遍历分类缓存
-                if(code.equals(item.getCode())){        //当编码相等时
+                if(code.equals(item.getSecondCode())){        //当编码相等时
                     article.setCategoryId(String.valueOf(item.getId()));    //把相等编码里的分类id值赋予文章中catagroyId中
                     break;  //跳出循环
                 }

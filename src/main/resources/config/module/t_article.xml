@@ -11,6 +11,9 @@
         <if test="title!=null and title!=''">
             and a.title like "%"#{title}"%"
         </if>
+        <if test="code!=null and code!=''">
+            and a.code =#{code}
+        </if>
         order by id DESC
         limit #{offset},#{pageSize}
     </select>

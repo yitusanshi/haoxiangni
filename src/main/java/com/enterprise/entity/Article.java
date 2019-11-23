@@ -21,6 +21,7 @@ public class Article extends PageModel implements Serializable{
     private String status;      //状态
     private String catename;    //分类名
     private int orders; //排序
+    private String code;//一级分类
 
     @Override
     public void clean() {
@@ -126,5 +127,11 @@ public class Article extends PageModel implements Serializable{
         this.orders = orders;
     }
 
+    public String getCode() {
+        return code;
+    }
 
+    public void setCode(String code) {
+        this.code = code;
+    }
 }
