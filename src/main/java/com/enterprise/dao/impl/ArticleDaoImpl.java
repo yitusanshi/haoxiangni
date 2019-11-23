@@ -2,8 +2,11 @@ package com.enterprise.dao.impl;
 
 import com.enterprise.dao.BaseDao;
 import com.enterprise.entity.Article;
+import com.enterprise.entity.ArticleCategory;
 import com.enterprise.entity.page.PageModel;
 import com.enterprise.dao.ArticleDao;
+import com.enterprise.service.ArticleCategoryService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
@@ -16,6 +19,8 @@ import java.util.List;
 public class ArticleDaoImpl implements ArticleDao {
     @Resource
     private BaseDao dao;
+    @Autowired
+    private ArticleCategoryService articleCategoryService;
 
     public void setDao(BaseDao dao) {
         this.dao = dao;
@@ -23,6 +28,15 @@ public class ArticleDaoImpl implements ArticleDao {
 
     @Override
     public int insert(Article article) {
+        String categoryid = article.getCategoryId();
+        System.out.println(categoryid);
+        ArticleCategory articleCategory = new ArticleCategory();
+        articleCategory.setId(Integer.valueOf(categoryid));
+        ArticleCategory category =  (ArticleCategory)dao.selectOne("articlecategory.selectOne", articleCategory);
+        System.out.println(category.getCode());
+        String code = category.getCode();
+        System.out.println(code);
+        article.setCode(code);
         return dao.insert("article.insert",article);
     }
 

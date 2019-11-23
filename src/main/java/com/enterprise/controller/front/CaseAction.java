@@ -66,6 +66,7 @@ public class CaseAction extends BaseController<Article> {
             page = new PageModel();
         }
         page.setPageSize(10);    //设置单页数据为10
+        System.out.println("page.getTotal()" + page.getTotal());
         page.setPagerSize((page.getTotal() + page.getPageSize() - 1)
                 / page.getPageSize());
         selectListAfter(page);
@@ -123,6 +124,7 @@ public class CaseAction extends BaseController<Article> {
             if(page == null){
                 page = new PageModel();
             }
+
             page.setPageSize(10);    //设置单页数据为10
             page.setPagerSize((page.getTotal() + page.getPageSize() - 1)
                     / page.getPageSize());
