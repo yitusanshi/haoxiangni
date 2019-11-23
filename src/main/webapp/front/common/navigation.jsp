@@ -49,10 +49,10 @@
                 <a href="<%=path%>/index">首 页</a>
             </li>
             <li>
-                <a href="<%=path%>/index">政策信息</a>
+                <a href="<%=path%>/policy/article">政策信息</a>
             </li>
             <li>
-                <a href="<%=path%>/article">标准法规(好使)</a>
+                <a href="<%=path%>/laws/article">标准法规(好使)</a>
             </li>
             <li>
                 <a href="<%=path%>/case/article">优秀案例</a>
