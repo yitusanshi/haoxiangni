@@ -5,15 +5,15 @@
 
 <body>
 <%@include file="/front/common/navigation.jsp" %>
-<div class="banner" style="background-image: url(<%=path%>/resource/images/banner.jpg)">
+<div class="banner" style="background-image: url(<%=path%>/resource/images/policy.jpg)">
 
 </div>
 <div class="warp_main">
     <div class="warp_left">
         <div class="warp_left_box">
-            <h3>政策信息</h3>
+            <h3 style="background-image: url(<%=path%>/resource/images/policy_banner.jpg)">政策信息</h3>
             <ul>
-                <c:forEach var="item" items="<%=SystemManage.getInstance().getArticleCategory()%>">
+                <c:forEach var="item" items="<%=SystemManage.getInstance().getPolicyCategory()%>">
                     <li <c:if test="${e.catename eq item.catename}">class="active"</c:if>><a
                             href="<%=path%>/policy/article/${item.secondCode}">${item.catename}</a></li>
                 </c:forEach>

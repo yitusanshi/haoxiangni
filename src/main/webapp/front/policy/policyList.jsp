@@ -6,13 +6,13 @@
 
 <body>
 <%@include file="/front/common/navigation.jsp" %>
-<div class="banner" style="background-image: url(<%=path%>/resource/images/banner.jpg)">
+<div class="banner" style="background-image: url(<%=path%>/resource/images/policy.jpg)">
 
 </div>
 <div class="warp_main">
     <div class="warp_left">
         <div class="warp_left_box">
-            <h3>政策信息</h3>
+            <h3 style="background-image: url(<%=path%>/resource/images/policy_banner.jpg)">政策信息</h3>
             <ul>
                 <c:forEach var="item" items="<%=SystemManage.getInstance().getPolicyCategory()%>">
                     <li
@@ -50,6 +50,7 @@
                             ${item.createtime} | 分类：${item.catename} | 浏览量：${item.hit}
                     </p>
                     <a href="policy/article/${item.id}"><span>${item.description}…</span></a>
+                    <img src="${item.image}">
                 </div>
             </c:forEach>
         </div>

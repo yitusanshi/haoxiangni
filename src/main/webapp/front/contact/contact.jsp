@@ -12,11 +12,11 @@
 <%@include file="/front/common/common.jsp"%>
 <body>
 <%@include file="/front/common/navigation.jsp"%>
-<div class="banner" style="background-image: url(<%=path%>/resource/images/banner.jpg)"></div>
+<div class="banner" style="background-image: url(<%=path%>/resource/images/contact.jpg)"></div>
 <div class="warp_main">
     <div class="warp_left">
         <div class="warp_left_box">
-            <h3>联系我们</h3>
+            <h3 style="background-image: url(<%=path%>/resource/images/contact_banner.jpg)">联系我们</h3>
 
         </div>
     </div>

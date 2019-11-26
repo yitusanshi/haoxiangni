@@ -58,10 +58,10 @@
                 <a href="<%=path%>/case/article">优秀案例</a>
             </li>
             <li>
-                <a href="<%=path%>/message">绿色设计</a>
+                <a href="#">绿色设计</a>
             </li>
             <li>
-                <a href="<%=path%>/message">分享交流</a>
+                <a href="<%=path%>/message">在线留言</a>
             </li>
             <li>
                 <a href="<%=path%>/contact">联系我们</a>

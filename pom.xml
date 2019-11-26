@@ -56,11 +56,6 @@
             <version>5.0.8</version>
         </dependency>
         <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <version>2.5</version>
-        </dependency>
-        <dependency>
             <groupId>net.sf.ehcache</groupId>
             <artifactId>ehcache</artifactId>
             <version>2.10.0</version>
@@ -166,12 +161,7 @@
             <artifactId>mchange-commons-java</artifactId>
             <version>0.2.15</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>3.2.9.RELEASE</version>
-        </dependency>
-        <dependency>
+         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc-portlet</artifactId>
             <version>3.2.9.RELEASE</version>
@@ -206,11 +196,11 @@
             <artifactId>pager-taglib</artifactId>
             <version>2.0</version>
         </dependency>
-       <!-- <dependency>
-            <groupId>org.aopalliance</groupId>
-            <artifactId>com.springsource.org.aopalliance</artifactId>
-            <version>1.0.0</version>
-        </dependency>-->
+        <!-- <dependency>
+             <groupId>org.aopalliance</groupId>
+             <artifactId>com.springsource.org.aopalliance</artifactId>
+             <version>1.0.0</version>
+         </dependency>-->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
@@ -233,10 +223,8 @@
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.22</version>
         </dependency>
-
-
     </dependencies>
-    <build>
+  <!--  <build>
         <finalName>haoxiangni</finalName>
         <plugins>
             <plugin>
@@ -261,7 +249,7 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.1</version>
                 <configuration>
-                    <port>8080</port>
+                    <port>8088</port>
                     <path>/haoxiangni</path>
                     <uriEncoding>UTF-8</uriEncoding>
                     <finalName>haoxiangni</finalName>
@@ -275,5 +263,5 @@
             </plugin>
 
         </plugins>
-    </build>
+    </build>-->
 </project>

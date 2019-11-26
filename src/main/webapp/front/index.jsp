@@ -70,10 +70,10 @@
             </a>
         </li>
         <li class="banners_li banners_li_last">
-            <a href="<%=path%>/about/article">
+            <a href="<%=path%>/contact">
                 <div>
-                    <h3>关于我们</h3>
-                    <p>了解好想你，了解我们</p>
+                    <h3>联系我们</h3>
+                    <p>联系我们，联系未来</p>
                 </div>
             </a>
         </li>

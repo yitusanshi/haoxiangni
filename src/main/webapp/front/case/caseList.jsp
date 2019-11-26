@@ -7,13 +7,13 @@
 
 <body>
 <%@include file="/front/common/navigation.jsp" %>
-<div class="banner" style="background-image: url(<%=path%>/resource/images/banner.jpg)">
+<div class="banner" style="background-image: url(<%=path%>/resource/images/case.jpg)">
 
 </div>
 <div class="warp_main">
     <div class="warp_left">
         <div class="warp_left_box">
-            <h3>优秀案例</h3>
+            <h3 style="background-image: url(<%=path%>/resource/images/case_banner.jpg)">优秀案例</h3>
             <ul>
                 <c:forEach var="item" items="<%=SystemManage.getInstance().getCaseCategory()%>">
                     <li <c:if test="${!empty secondCode && secondCode eq item.secondCode}">class="active"</c:if> ><a href="<%=path%>/case/article/${item.secondCode}">${item.catename}</a></li>

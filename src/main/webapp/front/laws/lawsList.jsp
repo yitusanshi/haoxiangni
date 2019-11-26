@@ -6,13 +6,13 @@
 
 <body>
 <%@include file="/front/common/navigation.jsp" %>
-<div class="banner" style="background-image: url(<%=path%>/resource/images/banner.jpg)">
+<div class="banner" style="background-image: url(<%=path%>/resource/images/laws.jpg)">
 
 </div>
 <div class="warp_main">
     <div class="warp_left">
         <div class="warp_left_box">
-            <h3>标准法规</h3>
+            <h3 style="background-image: url(<%=path%>/resource/images/laws_banner.jpg)">标准法规</h3>
             <ul>
                 <c:forEach var="item" items="<%=SystemManage.getInstance().getLawsCategory()%>">
                     <li

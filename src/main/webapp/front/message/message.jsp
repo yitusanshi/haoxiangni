@@ -10,10 +10,11 @@
 
 <%@include file="/front/common/common.jsp" %>
 <style>
-    table td{
-        padding:5px;
+    table td {
+        padding: 5px;
     }
-    .leaveSuccess{
+
+    .leaveSuccess {
         display: none;
         background: #ffffff;
         border: 1px solid #ececec;
@@ -25,7 +26,7 @@
         position: fixed;
         top: 40%;
         left: 50%;
-        box-shadow:0px 0px 10px #ececec;
+        box-shadow: 0px 0px 10px #ececec;
         -moz-box-shadow: 0 0 10px #ececec;
         -webkit-box-shadow: 0 0 10px #ececec;
     }
@@ -35,13 +36,13 @@
 <script type="text/javascript" src="<%=path%>/resource/validator/local/zh-CN.js"></script>
 <body>
 <%@include file="/front/common/navigation.jsp" %>
-<div class="banner" style="background-image: url(<%=path%>/resource/images/banner.jpg)">
+<div class="banner" style="background-image: url(<%=path%>/resource/images/share.jpg)">
 
 </div>
 <div class="warp_main">
     <div class="warp_left">
         <div class="warp_left_box">
-            <h3>在线留言</h3>
+            <h3 style="background-image: url(<%=path%>/resource/images/share_banner.jpg)">在线留言</h3>
 
         </div>
     </div>
@@ -54,13 +55,14 @@
         <div style="overflow: hidden;">
             <div class="article_content">
 
-                <form id="messageForm"  method="post" onsubmit="return leaveMessage();">
+                <form id="messageForm" method="post" onsubmit="return leaveMessage();">
                     <table width="100%" border="0" cellspacing="0" cellpadding="7">
                         <tr>
                             <td width="100" align="right">
                                 标题:
                             </td>
-                            <td><input type="text" class="message_input" name="title" id="title" data-rule="标题:required;length[1~20];"></td>
+                            <td><input type="text" class="message_input" name="title" id="title"
+                                       data-rule="标题:required;length[1~20];"></td>
                         </tr>
                         <tr>
                             <td align="right">
@@ -81,24 +83,31 @@
                             <td align="right">
                                 联系电话:
                             </td>
-                            <td><input type="text" class="message_input" name="tel" id="tel" data-rule="联系电话:required;mobile;"></td>
+                            <td><input type="text" class="message_input" name="tel" id="tel"
+                                       data-rule="联系电话:required;mobile;"></td>
                         </tr>
                         <tr>
                             <td align="right">Email:</td>
-                            <td><input type="text" class="message_input" name="email" id="eamil" data-rule="邮件:required;email;"></td>
+                            <td><input type="text" class="message_input" name="email" id="eamil"
+                                       data-rule="邮件:required;email;"></td>
                         </tr>
                         <tr>
                             <td align="right">内容:</td>
-                            <td><textarea rows="5" cols="50" class="message_textarea" name="content" id="content" data-rule="内容:required;length[1~300];"></textarea></td>
+                            <td><textarea rows="5" cols="50" class="message_textarea" name="content" id="content"
+                                          data-rule="内容:required;length[1~300];"></textarea></td>
                         </tr>
                         <tr>
                             <td align="right">验证码:</td>
-                            <td><input type="text" class="message_input" name="vcode" id="vcode" data-rule="验证码:required;length[1~300];remote[checkVcode]" style="width:100px;"><img src="<%=path%>/getVerificationCode.do" style="margin-left:50px;height: 28px;width:85px;" id="codes"
-                                                        onclick="javaScript:reloadImg();"/></td>
+                            <td><input type="text" class="message_input" name="vcode" id="vcode"
+                                       data-rule="验证码:required;length[1~300];remote[checkVcode]"
+                                       style="width:100px;"><img src="<%=path%>/getVerificationCode.do"
+                                                                 style="margin-left:50px;height: 28px;width:85px;"
+                                                                 id="codes"
+                                                                 onclick="javaScript:reloadImg();"/></td>
                         <tr>
                             <td></td>
                             <td>
-                                <input type="submit" class="message_sum"  value="提交"></td>
+                                <input type="submit" class="message_sum" value="提交"></td>
                         </tr>
                     </table>
                 </form>
@@ -110,9 +119,9 @@
     <img src="<%=path%>/resource/images/ok.png" style="width: 30px;vertical-align:middle;margin-top: -3px;">留言成功!
 </div>
 <script>
-    function leaveMessage(){
-        var _url=" <%=path%>/message/leaveMessage";
-        if($("#title").val()!='' && $("#name").val()!='' && $("#tel").val()!='' && $("#email").val()!='' && $("#content").val()!='') {
+    function leaveMessage() {
+        var _url = " <%=path%>/message/leaveMessage";
+        if ($("#title").val() != '' && $("#name").val() != '' && $("#tel").val() != '' && $("#email").val() != '' && $("#content").val() != '') {
             $.ajax({
                 type: 'POST',
                 url: _url,
@@ -120,10 +129,10 @@
                 dataType: "html",
                 success: function (data) {
                     $('#messageForm')[0].reset();
-                    if(data=="ok"){
-                        $(".leaveSuccess").animate({top:'40%'}).fadeIn("fast");
-                        setTimeout(function(){
-                            $(".leaveSuccess").animate({top:'40%'}).fadeOut("fast");
+                    if (data == "ok") {
+                        $(".leaveSuccess").animate({top: '40%'}).fadeIn("fast");
+                        setTimeout(function () {
+                            $(".leaveSuccess").animate({top: '40%'}).fadeOut("fast");
                         }, 3000);
                     }
                 },
@@ -133,12 +142,13 @@
         }
         return false;
     }
+
     /**
      * 更换验证码
      */
     function reloadImg() {
         document.getElementById("codes").src = "<%=path%>/getVerificationCode?" + "radom="
-                + Math.random();
+            + Math.random();
         $("#vcode").focus();
     }
 </script>
