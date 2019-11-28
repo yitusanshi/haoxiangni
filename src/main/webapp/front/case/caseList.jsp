@@ -48,7 +48,7 @@
                     <p class="article_item_message">
                             ${item.createtime} | 分类：${item.catename} | 浏览量：${item.hit}
                     </p>
-                    <a href="case/article/${item.id}"><span>${item.description}…</span></a>
+                    <a href="<%=path%>/case/article/${item.id}"><span>${item.description}…</span></a>
                 </div>
             </c:forEach>
         </div>

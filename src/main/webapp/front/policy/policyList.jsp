@@ -45,12 +45,12 @@
         <div style="overflow: hidden;">
             <c:forEach var="item" items="${pager.list}">
                 <div class="article_item">
+                   <%-- <a href=""><img src="${item.image}" style="float: left;"></a>--%>
                     <h2><a href="<%=path%>/policy/article/${item.id}">${item.title}</a></h2>
                     <p class="article_item_message">
                             ${item.createtime} | 分类：${item.catename} | 浏览量：${item.hit}
                     </p>
-                    <a href="policy/article/${item.id}"><span>${item.description}…</span></a>
-                    <img src="${item.image}">
+                    <a href="<%=path%>/policy/article/${item.id}"><span>${item.description}…</span></a>
                 </div>
             </c:forEach>
         </div>

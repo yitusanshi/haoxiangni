@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Cesiumai
-  Date: 2016/6/15
-  Time: 17:09
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; UTF-8"
          pageEncoding="UTF-8" %>
 <%@ page isELIgnored="false" %>
@@ -29,6 +22,10 @@
     <link rel="shortcut icon" type="image/x-icon"
           href="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath() %><%=SystemManage.getInstance().getSystemSetting().getFavicon() %>">
     <link rel="stylesheet" href="<%=path%>/resource/css/style.css">
+<%--    <link rel="stylesheet" href="<%=path%>/resource/css/reset.css">
+    <link rel="stylesheet" href="<%=path%>/resource/css/m.css">
+    <link rel="stylesheet" href="<%=path%>/resource/css/base.css">
+    <link rel="stylesheet" href="<%=path%>/resource/css/thems.css">--%>
     <script type="text/javascript" src="<%=path %>/resource/js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="<%=path%>/resource/js/jquery.SuperSlide.2.1.1.js"></script>
 </head>

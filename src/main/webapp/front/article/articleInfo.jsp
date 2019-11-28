@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Cesiumai
-  Date: 2016/6/15
-  Time: 9:41
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; UTF-8"
          pageEncoding="UTF-8"%>
 
@@ -18,7 +11,7 @@
 <div class="warp_main">
     <div class="warp_left">
         <div class="warp_left_box">
-            <h3>新闻动态</h3>
+            <h3>资讯</h3>
             <ul>
 <c:forEach var="item" items="<%=SystemManage.getInstance().getArticleCategory()%>">
     <li <c:if test="${e.catename eq item.catename}">class="active"</c:if>><a href="<%=path%>/article/${item.code}">${item.catename}</a></li>
@@ -27,13 +20,13 @@
         </div>
     </div>
     <div class="warp_right">
-        <div class="breadcrumb">
+    <%--    <div class="breadcrumb">
             <a href="<%=path%>/index">首页</a>
             >
             <a href="<%=path%>/article">新闻动态</a>
             >
             <a href="<%=path%>/article?categoryId=${e.categoryId}">${e.catename}</a>
-        </div>
+        </div>--%>
         <div style="overflow: hidden;">
             <div class="article_content">
                 <h1>${e.title}</h1>
