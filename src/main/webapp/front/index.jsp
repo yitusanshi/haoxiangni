@@ -93,7 +93,7 @@
 <div class="banners" style="height: 100px;padding: 80px;">
     <ul>
         <li class="banners_li">
-            <a href="#">
+            <a href="http://www.haoxiangni.cn/plus/list.php?tid=72">
                 <div>
                     <img src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath()%>/resource/images/product_1.jpg"
                          alt=""/>
@@ -102,7 +102,7 @@
             </a>
         </li>
         <li class="banners_li">
-            <a href="#">
+            <a href="http://www.haoxiangni.cn/plus/list.php?tid=72">
                 <div>
                     <img src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath()%>/resource/images/product_2.jpg"
                          alt=""/>
@@ -111,7 +111,7 @@
             </a>
         </li>
         <li class="banners_li banners_li_last">
-            <a href="#">
+            <a href="http://www.haoxiangni.cn/plus/list.php?tid=72">
                 <div>
                     <img src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath()%>/resource/images/product_3.jpg"
                          alt=""/>

@@ -2,9 +2,10 @@
          pageEncoding="UTF-8" %>
 <style>
 
-    .nav{
+    .nav {
         list-style: none outside none;
     }
+
     .nav li {
         width: 77px;
         height: 107px;
@@ -16,6 +17,7 @@
         margin-right: 16px;
         text-align: center;
     }
+
     .nav li a {
         text-decoration: none;
         color: inherit;
@@ -24,7 +26,7 @@
     }
 
 
-    .nav li a:hover{
+    .nav li a:hover {
         border-top: 3px solid #424C55;
 
     }
@@ -32,9 +34,9 @@
 <div style="width:1100px;height: 107px;margin: 0 auto;">
     <div style="width: 201px;height: 107px;float: left;">
         <a href="index">
-        <img src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath() %><%=SystemManage.getInstance().getSystemSetting().getLogo() %>"
-             width="201" height="107"/>
-            </a>
+            <img src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath() %><%=SystemManage.getInstance().getSystemSetting().getLogo() %>"
+                 width="201" height="107"/>
+        </a>
     </div>
     <div style="width: 768px;height: 107px;float: right;overflow: hidden">
         <ul class="nav">
@@ -51,7 +53,7 @@
                 <a href="<%=path%>/case/article">优秀案例</a>
             </li>
             <li>
-                <a href="#">绿色设计</a>
+                <a href="http://139.129.103.57:8080/renren-admin/login.html">绿色设计</a>
             </li>
             <li>
                 <a href="<%=path%>/message">在线留言</a>
