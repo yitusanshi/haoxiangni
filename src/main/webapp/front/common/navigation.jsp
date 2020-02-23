@@ -53,7 +53,7 @@
                 <a href="<%=path%>/case/article">优秀案例</a>
             </li>
             <li>
-                <a href="http://139.129.103.57:8080/renren-admin/login.html">绿色设计</a>
+                <a href="http://139.129.103.57:8090/renren-admin/login.html">绿色设计</a>
             </li>
             <li>
                 <a href="<%=path%>/message">在线留言</a>
