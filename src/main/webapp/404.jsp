@@ -29,7 +29,7 @@
 <div style="width:640px;height:480px;margin: auto;background: url('<%=path%>/resource/images/404.png');margin-top: 150px;">
     <div style="width: 330px;float: right;height: 200px;">
         <div style="font-size: 36px;margin-top: 50px;font-weight: 600;">糟糕！</div>
-        <div style="font-size: 24px;margin-top: 10px;">外星人已经把该页面带走了…</div>
+        <div style="font-size: 24px;margin-top: 10px;">你访问的资源不存在…</div>
     </div>
 </div>
 <div style="width:640px;margin: auto;text-align: center;font-size: 18px;">

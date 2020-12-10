@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="org.apache.commons.fileupload.*,org.apache.commons.fileupload.disk.*" %>
 <%@ page import="org.apache.commons.fileupload.servlet.*" %>
 <%@ page import="org.json.simple.*" %>
@@ -16,10 +16,13 @@
      */
 
 //文件保存目录路径
-    String savePath = pageContext.getServletContext().getRealPath("/") + "attached/";
+//    String savePath = pageContext.getServletContext().getRealPath("/") + "attached/";
+
+
+    String savePath = "/var/www/attached/";
 
 //文件保存目录URL
-String saveUrl  = request.getContextPath() + "/attached/";
+    String saveUrl = "/haoxiangni/var/www/attached/";
 
 //定义允许上传的文件扩展名
     HashMap<String, String> extMap = new HashMap<String, String>();
@@ -33,18 +36,18 @@ String saveUrl  = request.getContextPath() + "/attached/";
 
     response.setContentType("text/html; charset=UTF-8");
 
-if(!ServletFileUpload.isMultipartContent(request)){
+    if (!ServletFileUpload.isMultipartContent(request)) {
         out.println(getError("请选择文件。"));
         return;
     }
 //检查目录
     File uploadDir = new File(savePath);
-if(!uploadDir.isDirectory()){
+    if (!uploadDir.isDirectory()) {
         out.println(getError("上传目录不存在。"));
         return;
     }
 //检查目录写权限
-if(!uploadDir.canWrite()){
+    if (!uploadDir.canWrite()) {
         out.println(getError("上传目录没有写权限。"));
         return;
     }
@@ -53,7 +56,7 @@ if(!uploadDir.canWrite()){
     if (dirName == null) {
         dirName = "image";
     }
-if(!extMap.containsKey(dirName)){
+    if (!extMap.containsKey(dirName)) {
         out.println(getError("目录名不正确。"));
         return;
     }
@@ -84,23 +87,23 @@ if(!extMap.containsKey(dirName)){
         long fileSize = item.getSize();
         if (!item.isFormField()) {
             //检查文件大小
-		if(item.getSize() > maxSize){
+            if (item.getSize() > maxSize) {
                 out.println(getError("上传文件大小超过限制。"));
                 return;
             }
             //检查扩展名
             String fileExt = fileName.substring(fileName.lastIndexOf(".") + 1).toLowerCase();
-		if(!Arrays.<String>asList(extMap.get(dirName).split(",")).contains(fileExt)){
+            if (!Arrays.<String>asList(extMap.get(dirName).split(",")).contains(fileExt)) {
                 out.println(getError("上传文件扩展名是不允许的扩展名。\n只允许" + extMap.get(dirName) + "格式。"));
                 return;
             }
 
             SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
             String newFileName = df.format(new Date()) + "_" + new Random().nextInt(1000) + "." + fileExt;
-		try{
+            try {
                 File uploadedFile = new File(savePath, newFileName);
                 item.write(uploadedFile);
-		}catch(Exception e){
+            } catch (Exception e) {
                 out.println(getError("上传文件失败。"));
                 return;
             }

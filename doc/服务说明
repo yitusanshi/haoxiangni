@@ -1,0 +1,6 @@
+tomcat需要配合修改虚拟目录：
+在conf>server.xml中
+<HOST>
+添加如下
+    <Context docBase="/var/www/attached/file/" path="/haoxiangni/var/www/attached/file" />
+</HOST>

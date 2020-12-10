@@ -48,7 +48,10 @@
                     <td>${item.title}</td>
                     <td>${item.status}</td>
                     <td>${item.orders}</td>
-                    <td><a href="toEdit?id=${item.id}">编辑</a> | <a href="delete?id=${item.id}">删除</a></td>
+                        <%--
+                                            <td><a href="toEdit?id=${item.id}">编辑</a> | <a href="delete?id=${item.id}">删除</a></td>
+                        --%>
+                    <td><a href="toEdit?id=${item.id}">编辑</a></td>
                 </tr>
             </c:forEach>
             <tr>
@@ -69,6 +72,7 @@
             }
         });
     });
+
     function submitIDs(obj, tip) {
         if ($("input:checked").size() == 0) {
             alert("请先选择要操作的内容！");
@@ -83,6 +87,7 @@
         }
         return false;
     }
+
     //查询
     function selectList(obj) {
 

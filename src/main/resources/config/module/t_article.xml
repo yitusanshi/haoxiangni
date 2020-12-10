@@ -14,7 +14,7 @@
         <if test="code!=null and code!=''">
             and a.code =#{code}
         </if>
-        order by id DESC
+        order by createtime DESC
         limit #{offset},#{pageSize}
     </select>
     <select id="article.selectPageCount" parameterType="com.enterprise.entity.Article" resultType="java.lang.Integer">
