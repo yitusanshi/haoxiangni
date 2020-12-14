@@ -21,7 +21,7 @@
 									<img class="nav-user-photo" src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath() %>/${e.portrait}"/>
 								</c:when>
 								<c:otherwise>
-									<img class="nav-user-photo" src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath() %>/resource/images/portrait.jpg"/>
+									<img class="nav-user-photo" src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath() %>/haoxiangni/resource/images/portrait.jpg"/>
 								</c:otherwise>
 							</c:choose>
 						</td>

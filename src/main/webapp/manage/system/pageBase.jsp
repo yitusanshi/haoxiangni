@@ -33,7 +33,7 @@
                         %>
                         <img class="nav-user-photo" src="<%=path%>/<%=u.getPortrait()%>"/>
                         <%}else{%>
-                        <img class="nav-user-photo" src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath() %>/resource/images/portrait.jpg"/>
+                        <img class="nav-user-photo" src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath() %>/haoxiangni/resource/images/portrait.jpg"/>
                         <%}}%>
 								<span class="user-info">
 									<small>欢迎光临,</small>

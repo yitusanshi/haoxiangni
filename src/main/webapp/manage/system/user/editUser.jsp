@@ -122,7 +122,7 @@
                                 </c:when>
                                 <c:otherwise>
                                     <img class="nav-user-photo"
-                                         src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath() %>/resource/images/portrait.jpg"/>
+                                         src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath() %>/haoxiangni/resource/images/portrait.jpg"/>
                                 </c:otherwise>
                             </c:choose>
                             <button type="button" class="btn btn-primary " style="padding:2px 15px;" data-toggle="modal"

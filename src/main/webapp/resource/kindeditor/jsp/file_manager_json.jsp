@@ -17,7 +17,7 @@
     String rootPath = "/var/www/attached/";
 
 //根目录URL，可以指定绝对路径，比如 http://www.yoursite.com/attached/
-    String rootUrl = request.getContextPath() + "/attached/";
+    String rootUrl = request.getContextPath() + "/var/www/attached/";
 
 
 //图片扩展名

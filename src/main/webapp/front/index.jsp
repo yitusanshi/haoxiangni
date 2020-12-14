@@ -95,7 +95,7 @@
         <li class="banners_li">
             <a href="http://www.haoxiangni.cn/plus/list.php?tid=72">
                 <div>
-                    <img src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath()%>/resource/images/product_1.jpg"
+                    <img src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath()%>/haoxiangni/resource/images/product_1.jpg"
                          alt=""/>
                     <p style="text-align: center">唱歌的果</p>
                 </div>
@@ -104,7 +104,7 @@
         <li class="banners_li">
             <a href="http://www.haoxiangni.cn/plus/list.php?tid=72">
                 <div>
-                    <img src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath()%>/resource/images/product_2.jpg"
+                    <img src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath()%>/haoxiangni/resource/images/product_2.jpg"
                          alt=""/>
                     <p style="text-align: center">想菲菲</p>
                 </div>
@@ -113,7 +113,7 @@
         <li class="banners_li banners_li_last">
             <a href="http://www.haoxiangni.cn/plus/list.php?tid=72">
                 <div>
-                    <img src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath()%>/resource/images/product_3.jpg"
+                    <img src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath()%>/haoxiangni/resource/images/product_3.jpg"
                          alt=""/>
                     <p style="text-align: center">冻干红枣脆片</p>
                 </div>
